@@ -19,9 +19,9 @@ class PassSubmitViewTests(APITestCase):
             "user": {
                 "email": "user@example.com",
                 "phone": "1234567890",
-                "fam": "Doe",
-                "name": "John",
-                "otc": "Smith"
+                "fam": "nikolas",
+                "name": "kolupkin",
+                "otc": "viktor"
             }
         }
         response = self.client.post(url, data, format='json')
@@ -32,4 +32,4 @@ class PassSubmitViewTests(APITestCase):
         self.assertEqual(User.objects.count(), 1)
         self.assertEqual(Pass.objects.get().title, 'Pass Title')
 
-# Add more tests as needed
+
